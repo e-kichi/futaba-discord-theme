@@ -1,0 +1,928 @@
+﻿//META{"name":"チャット欄をふたばっぽくするテーマ","description":"Enjoy & Exciting!","author":"toshiaki","version":"0.0.1"}*//{}
+/*        ********** 変更履歴 **********
+        2018/02/06 04:45 左右をふたばっぽい背景に、文字色等の調整など。ざっくり雑に実装
+        2018/02/06 20:50 設定画面の文字色　左側アクティビティーの色、新規入場者のシステムコメント色などなどマイナーチェンジ
+        2018/02/06 23:30 テスト的に左の名前部分の文字に影を入れました
+        2018/02/07 00:00 VC/テキストチャンネルの設定画面の文字調整
+        2018/02/07 00:30 リアクションボタン/Emojiボタン/ファイル添付ボタンの色を調整
+        2018/02/07 00:30 コンテキストメニューの色を調整
+        2018/02/07 18:30 背景画像の適用範囲、リアクションカウントの背景色を自分がやったかどうかで色分け、メンバーリストの表示を太字に調整。
+        2018/02/07 18:55 コンパクトモード時のチャット欄のユーザーネームに影を追加
+        2018/02/07 20:30 VCチャンネルのミュートアイコンの色変更
+        */
+
+:root {
+        --main-color: rgba(192,96,80,1);
+        --main-color-faded: rgba(192,96,80,0.2);
+        --main-color-faded-no-alpha: rgba(255,255,238,1); /* #fff と --main-color-faded をブレンドした色 */
+        --accent-color: rgba(128,0,0,1);
+        --dark-color: #161921;
+
+        /* Modal Background Color / Opacity */
+        --short-gradient: linear-gradient(45deg, rgba(29,101,134,0.5), rgba(37,172,232,0.5));
+        --short-gradient-faded: linear-gradient(45deg, rgba(29,101,134,0.1), rgba(37,172,232,0.1));
+}
+
+div>*:not(code) {
+        font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif !important;
+}
+
+
+textarea {
+        background: transparent !important;
+}
+
+.scroller-wrap .scroller::-webkit-scrollbar-thumb {
+        border: 3px solid rgba(255,255,255,0) !important;
+        background-color: var(--accent-color) !important;
+}
+
+.scroller-wrap .scroller::-webkit-scrollbar-track-piece {
+        border: 3px solid rgba(255,255,255,0) !important;
+        background-color: var(--main-color-faded) !important;
+}
+
+.links,
+.help-container {
+        display: none;
+}
+
+.layers,
+.container-RYiLUQ,
+.container-2OU7Cz,
+.theme-dark .layer-kosS71,
+.theme-dark .layers-20RVFW,
+.theme-dark .chat form {
+        background: transparent !important;
+}
+
+.links,
+.chat,
+.typing-3eiiL_,
+.content,
+.guild-channels,
+.private-channels,
+.guild-header header,
+.divider-red span,
+.messages-wrapper,
+#rtc-connection,
+#voice-connection {
+        background: transparent !important;
+}
+
+/* Chat area */
+.content .flex-spacer { background:rgba(255,255,238,1) }
+
+
+/*
+          _           _                   _   _             
+ ___| |__   __ _| |_   ___  ___  ___| |_(_) ___  _ __  
+/ __| '_ \ / _` | __| / __|/ _ \/ __| __| |/ _ \| '_ \ 
+| (__| | | | (_| | |_  \__ \  __/ (__| |_| | (_) | | | |
+\___|_| |_|\__,_|\__| |___/\___|\___|\__|_|\___/|_| |_|
+
+*/
+
+.channel-text-area-default {
+        margin: 10px 0 17px;
+}
+
+.inner-3if5cm {
+        background-color:rgba(255,255,255,1) !important;
+        border: 1px solid rgba(0, 0, 0,1) !important;
+        padding: 0 10px;
+}
+
+.search .search-bar {
+        background-color: rgba(0, 0, 0, 0.55) !important;
+}
+
+.search-answer,
+.search-filter {
+        background-color: var(--accent-color) !important;
+}
+
+.search-popout {
+        background-color: var(--dark-color);
+        /*position: absolute !important;
+        top: 55px !important;
+        right: 162px !important;
+        left: auto !important;*/
+}
+
+.search-popout .option:after {
+        background: transparent;
+}
+
+.search-popout .option.selected {
+        background-color: rgba(5, 5, 6, 0.9) !important;
+        box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+
+.search-popout .option.selected:after {
+        background: transparent !important;
+}
+
+.search-results-wrap {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.search-results-wrap .search-header {
+        background: transparent !important;
+}
+
+.search-results-wrap .channel-separator:before {
+        border: none;
+}
+
+.search-results-wrap .channel-separator .channel-name {
+        background-color: transparent !important;
+}
+
+.search-results-wrap .search-result:before {
+        background: transparent !important;
+        border-top: 1px solid rgba(0,0,0,0.3);
+}
+
+.search-results-wrap .search-result:after {
+        background: transparent !important;
+}
+
+.search-results-wrap .search-result:not(.expanded) .search-result-message.hit, 
+.search-results-wrap .search-result.expanded {
+        border: 2px solid rgba(17, 21, 25, 0.6) !important;
+}
+
+.search-results-wrap .search-result .hit {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.45) !important;
+}
+
+/*未チェック*/
+.theme-dark .search-results-wrap .action-buttons .jump-button {
+        background-color: rgba(240, 240, 240, 0.07);
+}
+
+.search-popout .date-picker .date-picker-hint .hint-value {
+        background: var(--main-color) !important;
+}
+
+.search-popout .date-picker .date-picker-hint {
+        border-top: none !important;
+}
+
+/*未チェック*/
+.theme-dark .search-results-wrap .scroller-wrap .scroller::-webkit-scrollbar-track-piece {
+        border:3px solid rgba(255,255,255,0) !important;
+        background-color:rgba(0,0,0,0.3) !important;
+}
+
+.theme-dark .search-results-wrap .scroller-wrap .scroller::-webkit-scrollbar-thumb {
+        border:3px solid rgba(255,255,255,0) !important;
+        background-color:var(--accent-color) !important;
+}
+
+.search-popout .date-picker {
+        border-top: none !important;
+}
+
+.react-datepicker {
+        background-color: rgba(0,0,0,0.6) !important;
+        color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.react-datepicker .react-datepicker__header {
+        background-color: transparent !important;
+}
+
+/*未チェック*/
+.react-datepicker .react-datepicker__day--disabled,
+.react-datepicker .react-datepicker__day--outside-month {
+        background-color: rgba(255, 255, 255, 0.07) !important;
+        color: rgba(167, 167, 167, 0.6) !important;
+}
+
+.react-datepicker .react-datepicker__day {
+        color: #fff;
+        border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.react-datepicker .react-datepicker__month>.react-datepicker__week:last-of-type .react-datepicker__day {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.react-datepicker .react-datepicker__month .react-datepicker__week>.react-datepicker__day:last-of-type {
+        border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.react-datepicker .react-datepicker__day.react-datepicker__day--today:after {
+        background-color: var(--main-color) !important;
+}
+
+.react-datepicker .react-datepicker__day.react-datepicker__day--selected:hover, .react-datepicker .react-datepicker__day:hover {
+        background-color: var(--main-color) !important;
+}
+
+.header-toolbar button span {
+        background-size: 22px;
+}
+
+.header-toolbar button.-open {
+        background:var(--main-color);
+}
+
+.channel-pins-wrap {
+        background: rgba(0,0,0,0.4) !important;
+}
+
+.channel-pins-wrap .header,
+.channel-pins-wrap .footer {
+        background-color: rgba(0,0,0,0.4) !important;
+        box-shadow: none !important;
+}
+
+.channel-pins .message-group {
+        background-color: rgba(0,0,0,0.7) !important;
+}
+
+.channel-pins .message-group:hover {
+        box-shadow: 0 0 4px 5px rgba(37, 172, 232, 0.1);
+        border-color: rgba(37, 172, 232, 0.47) !important;
+}
+
+.channel-pins .message-group .action-buttons {
+        box-shadow: none !important;
+        background: none !important;
+}
+
+.channel-pins .message-group .action-buttons .jump-button {
+        background-color: rgba(255,255,255,0.15) !important;
+}
+
+.spinner-wandering-cubes .spinner-item {
+        background-color:var(--main-color);
+        width:15px;
+        height:15px;
+        border-radius:4px;
+}
+
+.chat .has-more button {
+        color:var(--main-color) !important;
+        background:rgba(255,255,255,0.1) !important;
+        border:none !important;
+        box-shadow:none !important;
+}
+
+.highlight {
+        color:var(--main-color);
+}
+
+.emoji-picker {
+        background:rgba(0,0,0,0.85) !important;
+}
+
+.emoji-picker .search-bar input {
+        color:rgba(255,255,255,0.7);
+        background:rgba(255,255,255,0.1);
+}
+
+.emoji-picker .search-bar-clear {
+        background:rgba(0,0,0,0.7);
+}
+
+.emoji-picker .sticky-header,
+.emoji-picker .search-bar {
+        background:rgba(0,0,0,0.95) !important;
+}
+
+.emoji-picker .categories .item.selected {
+        border-bottom-color:var(--main-color);
+}
+
+.chat .title-qAcLxz {
+        border-bottom: 1px solid rgba(0,0,0,0.3) !important;
+        background: rgba(0,0,0,0.95) !important;
+        box-shadow: none !important;
+}
+
+.header-1tSljs {
+        border-bottom: 0px solid rgba(0,0,0,0.3) !important;
+        background: rgba(0,0,0,0.15) !important;
+        box-shadow: none !important;
+        height: 49px !important;
+}
+
+.header-toolbar button.active {
+        background-color:rgba(255,255,255,0.1);
+}
+
+.botTagRegular-288-ZL,
+.need-help-modal .header {
+        background:var(--main-color);
+        padding: 2px 3px;
+        font-size: 9px;
+}
+
+.form header {
+        color:var(--main-color);
+}
+
+/*未チェック*/
+.markdown-modal,
+.form .form-inner,
+.form .form-header,
+.form .form-actions,
+.need-help-modal .footer,
+.markdown-modal .markdown-modal-footer {
+        background:rgba(0,0,0,0.85) !important;
+        color: #000;
+}
+
+.alert.form .form-inner .btn {
+        padding: 0 !important;
+        border: none !important;
+}
+
+/*未チェック*/
+.channel-notification-settings .content label,
+.notification-settings-modal .mute-server .checkbox .label span {
+        color:#000;
+}
+
+.notification-settings-modal .notification-settings-modal-channel-settings-list {
+        box-shadow:none !important;
+}
+
+/*未チェック*/
+.markdown-modal .markdown-modal-header {
+        color:#000;
+}
+
+.form .form-header,
+.form .form-actions,
+.need-help-modal .footer,
+.channel-notification-settings,
+.markdown-modal .markdown-modal-header,
+.markdown-modal .markdown-modal-footer {
+        border-color:rgba(255,255,255,0.2);
+}
+
+.modal-content {
+        background: transparent !important;
+}
+
+/*未チェック*/
+.modal-content .user-name {
+        color:#000;
+}
+
+.modal-content .form-inner p {
+        color:rgba(255,255,255,0.7);
+}
+
+/*未チェック*/
+.chat .new-messages-bar {
+        background-color:rgba(29,101,134,.9);
+}
+
+/*未チェック*/
+.chat .new-messages-bar:hover {
+        background-color:rgba(29,101,134,1);
+}
+
+/*未チェック*/
+.chat .new-messages-bar button:last-child {
+        color:rgba(255,255,255,0.5);
+}
+
+.chat .empty-message {
+        border: 0 !important;
+        background: transparent !important;
+        height: 40px;
+}
+
+/*未チェック*/
+.chat-empty {
+        background:rgba(20,23,27,0.95);
+}
+
+
+.chat>.title-wrap>.title .channel-name {
+        color:rgba(255,255,255,0.1);
+}
+
+.chat>.title-wrap>.topic {
+        font-size:12px;
+        margin-top:5px;
+        color:#656565 !important;
+}
+
+.markdown-modal .highlight,
+.chat .title-wrap .topic .highlight {
+        background-color:rgba(255,255,255,.1) !important;
+}
+
+.markdown-modal .highlight:hover,
+.chat .title-wrap .topic .highlight:hover {
+        background-color:rgba(255,255,255,.2) !important;
+        color:var(--main-color) !important;
+}
+
+.chat .divider {
+        height:25px;
+        background:none;
+}
+
+.chat .divider>div {
+        display:none !important;
+}
+
+/*「ここから何月何日のメッセージ」表示のバー色*/
+.chat .divider:not(.divider-red)>div {
+        background:rgba(128,0,0,0.1) !important;
+}
+
+.chat .divider:before {
+        background:rgba(0,0,0,0.06) !important;
+        height:25px;
+        border-radius: 5px;
+}
+
+/*「新着メッセージ」表示のバー色*/
+.chat .divider.divider-red:before {
+        background: rgba(180,51,51,.8) !important;
+}
+
+.chat .divider>span {
+        background-color:transparent !important;
+        font-size:12px;
+        text-transform:uppercase;
+        margin:5px 0px;
+        border-radius: 0px;
+        opacity: 1;
+        padding: 8px 15px;
+        line-height: 1px;
+        width: 100%;
+        text-align: center;
+}
+
+/*「新着メッセージ」表示の文字*/
+.chat .divider.divider-red>span {
+        color:rgba(255,255,255,1) !important;
+}
+
+/*「ここから何月何日のメッセージ」表示の文字*/
+.chat .divider:not(.divider-red)>span {
+        color:var(--accent-color) !important;
+}
+
+.chat .divider>div {
+        display:none;
+}
+
+.chat form {
+        border-top: none !important;
+}
+
+.messages .message-group:not(.has-divider) {
+        border-bottom-color:hsla(0,0%,100%,.04) !important;
+}
+
+/*チャットログの発言ごとのDIV*/
+.messages .message-group {
+        border-radius:5px !important;
+        border-bottom: none !important;
+        background:transparent !important;
+        background:rgba(240,224,214,1) !important;
+        border:none !important;
+        padding:10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+}
+
+.friends-table .messages .message-group .message-send-failed .markup,
+.friends-table .messages .message-group .message-send-failed .markup a,
+.messages .message-group .message-send-failed .markup,
+.messages .message-group .message-send-failed .markup a {
+        color:rgba(240,71,71,1) !important;
+        font-style:italic;
+}
+
+.mentioned .message-text {
+        border-radius: 0 !important;
+        background: rgba(37,172,232,0.2) !important;
+}
+
+.mentioned .message-text:after {
+        border-radius: 0 !important;
+        border-color:var(--main-color) !important;
+        background:rgba(37,172,232,0.2) !important;
+}
+
+.mention {
+        color: var(--main-color) !important;
+        background-color: var(--main-color-faded) !important;
+        padding: 0px 2px;
+        border-radius: 5px;
+}
+
+/*本文リンク*/
+.messages a {
+        color:rgba(0,0,192,1) !important;
+}
+
+/*名前欄*/
+.messages h2 .user-name {
+        font-size:0.9em;
+}
+
+.messages h2 span {
+        color:rgba(0,0,0,0.5) !important;
+}
+
+.messages h2 .bot-tag {
+        color:rgba(0,0,0,0.8) !important;
+}
+
+.messages .markup {
+        font-size:0.85em !important;
+        line-height:1.4em !important;
+}
+
+/*本文フォント*/
+.messages .markup:not([data-colour="true"]) {
+        color:var(--accent-color) !important;
+        font-size:0.95em !important;
+}
+
+.markup pre {
+        border-radius:0 !important;
+        background:transparent !important;
+        border-color:rgba(0,0,0,0.1) !important;
+}
+
+.markup pre code.hljs {
+        background:rgba(0,0,0,0.1) !important;
+        color:rgba(0,0,0,0.7) !important;
+        padding:1em !important;
+}
+
+.modal-content .markup code.inline,
+.markup code.inline {
+        background:rgba(0,0,0,0.1) !important;
+        color: #789922 !important;
+        padding:0em 0.6em !important;
+        border-radius:3px !important;
+        font-size:0.95em !important;
+}
+
+.messages .markup .highlight {
+        background-color:rgba(29,101,134,.5) !important;
+        color:#ddd !important;
+        padding: 1px 4px;
+        border-radius: 0;
+}
+
+.messages .markup .highlight:hover {
+        background-color:rgba(29,101,134,1) !important;
+        color:#fff !important;
+}
+
+.messages .invite-button {
+        background: rgba(255,255,255,0.07) !important;
+        border-color: rgba(255,255,255,0.1) !important;
+}
+
+.emotewrapper img {
+        position: relative;
+        top: 7px;
+}
+
+.textArea-20yzAH {
+        font-size: 0.85em;
+        color: var(--dark-color)!important;
+}
+
+.channel-textarea-upload {
+        border-right-color: hsla(0,0%,100%,.1) !important;
+}
+
+.channel-textarea-inner {
+        border: 2px solid rgba(128,0,0,0.2) !important;
+        background:rgba(0,0,0,0.6) !important;
+}
+
+.channel-textarea-autocomplete-inner {
+        border:none !important;
+        background:rgba(0,0,0,0.95) !important;
+}
+
+.channel-textarea-autocomplete-inner header {
+        border:none !important;
+        background: rgba(37,172,232,0.5) !important;
+        color: rgba(255,255,255,0.9) !important;
+}
+
+.channel-textarea-autocomplete-inner ul li.active {
+        background:rgba(255,255,255,0.1) !important;
+}
+
+.channel-textarea-guard button {
+        background:var(--accent-color) !important;
+}
+
+.channel-textarea-guard button:hover {
+        background:var(--main-color) !important;
+}
+
+.text-1rI06- {
+        font-size:11px;
+        color: rgba(128,0,0,1) !important;
+}
+
+.spoiler span {display:none;}
+.spoiler:before {
+        min-height:18px;
+        padding-top:2px;
+        border-radius:5px;
+        background:rgba(25,25,25,0.7);
+}
+
+#twitchcord-button {
+        background-size: 24px;
+        background-position: 20px;
+        background-color: transparent;
+        opacity:0.4;
+}
+
+#twitchcord-button:hover,
+#twitchcord-button.twitchcord-button-open {
+        opacity:1;
+}
+
+#twitchcord-button-container {
+        right:30px !important;
+}
+
+/*** COMPACT MODE ***/
+
+.message-group.compact {
+        margin-left:0;
+}
+
+.message-group.compact .timestamp {
+        color:rgba(128,0,0,0.7) !important;
+        position:relative;
+        top:-1px;
+}
+
+.message-group.compact .message .markup .user-name {
+        margin-right:8px;
+        font-size:14px;
+        text-shadow: 1px 1px 0.25px rgba(64,64,64,1) !important;
+}
+
+/*
+ポップアウト関係（20180207追加）
+*/
+/*コメ欄のリアクション追加ボタン押したときに出るやつ*/
+.popouts .emojiPicker-3g68GS{
+        background-color: rgba(255,255,238,1) !important;
+}
+
+
+
+
+
+/*
+個人的に追加（HDk）
+*/
+.comment .timestamp{
+        color:var(--accent-color) !important;
+        font-weight: bold !important;
+}
+
+.chat form{
+        border-top-width:1px !important;
+        border-top-style:solid !important;
+        border-top-color:var(--accent-color) !important;
+}
+
+.theme-dark .message-group h2 strong {
+   color: #117744;
+   font-weight: bold;
+}
+
+/*設定画面*/
+.ui-standard-sidebar-view .sidebar-region{
+        background-color: rgba(255,255,238,1) !important;
+}
+
+.ui-standard-sidebar-view .content-region{
+        background-color: rgba(255,255,238,1) !important;
+}
+
+
+/*
+ ↓↓↓ 以下新たに追加した部分 ↓↓↓ 
+*/
+
+/* 左右背景の画像 （ふたばのトップページから引っ張ってる） */
+.scroller-NXV0-d {
+        background-image: url("http://www.2chan.net/ba.gif") !important;
+}
+
+.channel-members-wrap .scroller-fzNley {
+        background-image: url("http://www.2chan.net/ba.gif") !important;
+}
+
+/* 右部分役職の文字色 (コメント色と同じ色に変更と強調)*/
+.old-h2 {
+        color:var(--accent-color) !important;
+        font-weight: bold !important;
+}
+.member-username-inner {
+        text-shadow: 1px 1px 0.25px rgba(64,64,64,1) !important;
+        font-weight: bold;
+}
+.theme-dark .channel-members .member{
+        color:hsla(0,0%,100%,1) !important;
+}
+
+.member-activity-text {
+        color:var(--accent-color) !important;
+}
+/* 左部分チャンネルの文字色他 */
+.nameDefault-Lnjrwm {
+        color:var(--accent-color) !important;
+        font-weight: bold !important;
+}
+.nameDefaultText-QoumjC {
+
+        color:var(--dark-color)!important;
+}
+.nameUnreadText-1pxldj {
+        color:rgba(0,0,255,1)!important;
+}
+.nameDefaultVoice-1swZoh {
+        color:var(--dark-color)!important;
+}
+.foreground-2zy1hc {
+        color:var(--dark-color)!important;
+}
+.wrapper-2ldvyE {
+        color:var(--dark-color)!important;
+        background: transparent !important;
+}
+.unread-23Kvxk {
+        background-color:rgba(0,0,255,1)!important;
+}
+/* VC部屋に入ったユーザ*/
+.nameDefault-1I0lx8 {
+        color:var(--dark-color)!important;
+        font-weight: bold !important;
+}
+/* チャンネル作成ボタンの色*/
+.icon-2WU8ha {
+       background-color:rgba(0,0,0,0.8) !important;
+}
+
+/* VCチャンネルのミュートアイコンの色 */
+.icon-1NXYub {
+        background-color:rgba(0,0,0,0.8) !important;
+}
+.icon-33Frxe {
+        background-color:rgba(0,0,0,0.8) !important;
+}
+/* チャット入力部分のボタンの色 */
+.attachButtonPlus-2l1NEU {
+        fill: var(--accent-color) !important;
+}
+.spriteNormal-3BYqCK {
+        filter: grayscale(100%) brightness(60%) !important;
+}
+
+/* 絵文字レス用のボタンの色 */
+.btn-option {
+        filter: invert(100%) !important;
+}
+.btn-reaction {
+        filter: invert(100%) !important;
+}
+
+/* アップロードしたファイルの容量の文字色 */
+.metadata-2t2-gW {
+        color:var(--dark-color)!important;
+}
+
+/* リアクション絵文字の背景とカウント文字色 */
+.reactions .reaction{
+        background-color:rgba(128,0,0,0.1) !important;
+}
+
+.reactions .reaction-me{
+        background-color:rgba(128,0,0,0.2) !important;
+}
+
+.reaction-count {
+        color:var(--accent-color) !important;
+}
+
+/* 新規入場者の文字色 */
+.system-message {
+        color:var(--accent-color) !important;
+}
+.system-message-timestamp {
+        color:var(--accent-color) !important;
+}
+
+/* 編集済の文字色 */
+.edited {
+        color:var(--dark-color)!important;
+}
+
+/* ユーザー設定画面の文字色など */
+.header-1-f9X5 {
+        color:var(--dark-color)!important;
+        font-weight: bold !important;
+}
+.notSelected-PgwTMa {
+        color:var(--accent-color) !important;
+}
+.ui-tab-bar-header {
+        color:var(--dark-color)!important;
+        font-weight: bold !important;
+}
+.ui-tab-bar-item {
+        color:var(--accent-color) !important;
+}
+.description-3MVziF {
+        color:var(--dark-color)!important;
+}
+.default-3bB32Y {
+        color:var(--dark-color)!important;
+}
+.contentsDefault-nt2Ym5 {
+        color:var(--dark-color)!important;
+}
+.h2-2ar_1B {
+        color:var(--dark-color)!important;
+        font-weight: bold !important;
+}
+.h3-gDcP8B {
+        color:var(--dark-color)!important;
+}
+.h5-3KssQU {
+        color:var(--dark-color)!important;
+}
+.titleDefault-1CWM9y {
+        color:var(--dark-color)!important;
+}
+.now-playing-add {
+        color:var(--dark-color)!important;
+}
+.game-name {
+        color:var(--accent-color) !important;
+}
+
+/* チャンネルの設定画面の文字色 */
+.markValue-235z9M {
+        color:var(--dark-color)!important;
+}
+.title-38OOBL {
+        color:var(--dark-color)!important;
+}
+.text-1rLRsh {
+        color:var(--dark-color)!important;
+}
+
+/* コンテキストメニュー */
+.contextMenu-uoJTbz {
+  border: 1px solid var(--main-color) !important;
+  background: var(--main-color-faded-no-alpha) !important;
+}
+
+.contextMenu-uoJTbz .item-1XYaYf {
+  color: var(--accent-color) !important;
+  background: rgba(240,224,214,1) !important;
+}
+
+.contextMenu-uoJTbz .itemGroup-oViAgA {
+  color: var(--accent-color) !important;
+  background: rgba(240,224,214,1) !important;
+}
+
+.contextMenu-uoJTbz .itemSubMenu-3ZgIw- {
+  color: var(--accent-color) !important;
+  background: rgba(240,224,214,1) url(/assets/e4afe52f6863408a35654a6e5fd69ba9.svg) no-repeat 155px 50% !important;
+}
+
+.contextMenu-uoJTbz .plugin-context-menu {
+  background: rgba(240,224,214,1) !important;
+}
+
+.contextMenu-uoJTbz .scroller-fzNley {
+  border: 1px solid var(--main-color) !important;
+  background: var(--main-color-faded-no-alpha) !important;
+}
