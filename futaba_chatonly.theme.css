@@ -9,6 +9,7 @@
         2018/02/07 18:30 背景画像の適用範囲、リアクションカウントの背景色を自分がやったかどうかで色分け、メンバーリストの表示を太字に調整。
         2018/02/07 18:55 コンパクトモード時のチャット欄のユーザーネームに影を追加
         2018/02/07 20:30 VCチャンネルのミュートアイコンの色変更
+        2018/02/09 00:45 メンバーリスト部分をちょっと暗めにしてみた（背景画像指定クラスの調整）
         */
 
 :root {
@@ -733,8 +734,15 @@ textarea {
         background-image: url("http://www.2chan.net/ba.gif") !important;
 }
 
-.channel-members-wrap .scroller-fzNley {
+.channel-members-wrap .scrollerWrap-2uBjct {/*透明度変更できるようにクラス指定変えました byHDk*/
         background-image: url("http://www.2chan.net/ba.gif") !important;
+}
+
+.channel-members-wrap .scroller-fzNley {/*右側メンバーリストの透過。グラデーションはいまいちだったのでコメントアウト byHDk*/
+        background-color: rgba(64,64,64,0.1);
+/*
+        background:-webkit-gradient(linear, left top, right top, from(rgba(64,64,64,0.5)), color-stop(0.075, rgba(64,64,64,0.1)), to(rgba(64,64,64,0.05))) !important;
+*/
 }
 
 /* 右部分役職の文字色 (コメント色と同じ色に変更と強調)*/
