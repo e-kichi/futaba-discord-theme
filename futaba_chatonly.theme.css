@@ -1,4 +1,4 @@
-﻿//META{"name":"チャット欄をふたばっぽくするテーマ","description":"Enjoy & Exciting!","author":"toshiaki","version":"0.0.1"}*//{}
+//META{"name":"チャット欄をふたばっぽくするテーマ","description":"Enjoy & Exciting!","author":"toshiaki","version":"0.0.1"}*//{}
 /*        ********** 変更履歴 **********
         2018/02/06 04:45 左右をふたばっぽい背景に、文字色等の調整など。ざっくり雑に実装
         2018/02/06 20:50 設定画面の文字色　左側アクティビティーの色、新規入場者のシステムコメント色などなどマイナーチェンジ
@@ -10,6 +10,7 @@
         2018/02/07 18:55 コンパクトモード時のチャット欄のユーザーネームに影を追加
         2018/02/07 20:30 VCチャンネルのミュートアイコンの色変更
         2018/02/09 00:45 メンバーリスト部分をちょっと暗めにしてみた（背景画像指定クラスの調整）
+        2018/02/11 02:30 チャンネルリストのテキスト色/背景色/アイコンなどを調整（基本カラーで統一）
         */
 
 :root {
@@ -786,6 +787,33 @@ textarea {
 .unread-23Kvxk {
         background-color:rgba(0,0,255,1)!important;
 }
+
+.contentHoveredText-2HYGIY, .contentHoveredVoice-3qGNKh:active, .contentSelectedVoice-gTtYM9:active {
+  background-color: var(--main-color-faded) !important;
+}
+
+.contentUnreadText-2HYGIY, .contentHoveredVoice-3qGNKh:active, .contentSelectedVoice-gTtYM9:active {
+  background-color: var(--main-color-faded) !important;
+}
+
+.nameHoveredText-2FFqiz {
+  color: var(--accent-color) !important;
+}
+
+.contentSelectedText-3j5CXt {
+  border: solid 1px rgba(192,96,80,1) !important;
+  background-color: rgba(192,96,80,0.5) !important;
+}
+
+.nameHoveredVoice-TIoHRJ {
+  color: var(--accent-color) !important;
+}
+
+.nameHovered-28u_Fz, .nameSpeaking-3ROx9q {
+  font-weight: bold !important;
+  color: var(--accent-color) !important;
+}
+
 /* VC部屋に入ったユーザ*/
 .nameDefault-1I0lx8 {
         color:var(--dark-color)!important;
@@ -798,10 +826,12 @@ textarea {
 
 /* VCチャンネルのミュートアイコンの色 */
 .icon-1NXYub {
-        background-color:rgba(0,0,0,0.8) !important;
+        border-radius: 3px;
+        background-color: rgba(128,0,0,.8) !important;
 }
 .icon-33Frxe {
-        background-color:rgba(0,0,0,0.8) !important;
+        border-radius: 3px;
+        background-color: rgba(128,0,0,.8) !important;
 }
 /* チャット入力部分のボタンの色 */
 .attachButtonPlus-2l1NEU {
@@ -933,4 +963,26 @@ textarea {
 .contextMenu-uoJTbz .scroller-fzNley {
   border: 1px solid var(--main-color) !important;
   background: var(--main-color-faded-no-alpha) !important;
+}
+
+.iconSpacing-5GIHkT .icon-3dhTrw {
+  border-radius: 3px;
+  background-color: rgba(128,0,0,.5) !important;
+}
+
+.iconSpacing-5GIHkT .icon-3dhTrw:hover {
+  background-color: rgba(128,0,0,.8) !important;
+}
+
+.iconSpacing-5GIHkT .actionIcon-2JXNvo {
+  border-radius: 3px;
+  background-color: rgba(128,0,0,.5) !important;
+}
+
+.iconSpacing-5GIHkT .actionIcon-2JXNvo:hover {
+  background-color: rgba(128,0,0,.8) !important;
+}
+
+.unread-2TDDFN {
+  background-color: var(--accent-color) !important;
 }
