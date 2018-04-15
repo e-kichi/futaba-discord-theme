@@ -11,6 +11,7 @@
         2018/02/07 20:30 VCチャンネルのミュートアイコンの色変更
         2018/02/09 00:45 メンバーリスト部分をちょっと暗めにしてみた（背景画像指定クラスの調整）
         2018/02/11 02:30 チャンネルリストのテキスト色/背景色/アイコンなどを調整（基本カラーで統一）
+        2018/04/16 00:30 Discord本体のバージョンアップに対応
         */
 
 :root {
@@ -735,11 +736,11 @@ textarea {
         background-image: url("http://www.2chan.net/ba.gif") !important;
 }
 
-.channel-members-wrap .scrollerWrap-2uBjct {/*透明度変更できるようにクラス指定変えました byHDk*/
+.membersWrap-3wRngy .scrollerWrap-2uBjct {/*透明度変更できるようにクラス指定変えました byHDk*/
         background-image: url("http://www.2chan.net/ba.gif") !important;
 }
 
-.channel-members-wrap .scroller-fzNley {/*右側メンバーリストの透過。グラデーションはいまいちだったのでコメントアウト byHDk*/
+.membersWrap-3wRngy .scroller-fzNley {/*右側メンバーリストの透過。グラデーションはいまいちだったのでコメントアウト byHDk*/
         background-color: rgba(64,64,64,0.1);
 /*
         background:-webkit-gradient(linear, left top, right top, from(rgba(64,64,64,0.5)), color-stop(0.075, rgba(64,64,64,0.1)), to(rgba(64,64,64,0.05))) !important;
@@ -747,19 +748,19 @@ textarea {
 }
 
 /* 右部分役職の文字色 (コメント色と同じ色に変更と強調)*/
-.old-h2 {
+.membersGroup-3_dP5E {
         color:var(--accent-color) !important;
         font-weight: bold !important;
 }
-.member-username-inner {
+.memberInner-3XUq9K {
         text-shadow: 1px 1px 0.25px rgba(64,64,64,1) !important;
         font-weight: bold;
 }
-.theme-dark .channel-members .member{
+.theme-dark .members-1bid1J .member-2FrNV0 {
         color:hsla(0,0%,100%,1) !important;
 }
 
-.member-activity-text {
+.activityText-258pdj {
         color:var(--accent-color) !important;
 }
 /* 左部分チャンネルの文字色他 */
