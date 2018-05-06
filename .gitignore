@@ -1,2 +1,5 @@
 *.css
 !futaba_chatonly.theme.css
+*.bak
+*.orig
+/tmp
