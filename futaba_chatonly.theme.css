@@ -51,17 +51,17 @@ textarea {
 }
 
 .layers,
-.container-RYiLUQ,
-.container-2OU7Cz,
-.theme-dark .layer-kosS71,
-.theme-dark .layers-20RVFW,
+.container-PNkimc,
+.container-2lgZY8,
+.theme-dark .layer-3QrUeG,
+.theme-dark .layers-3iHuyZ,
 .theme-dark .chat form {
         background: transparent !important;
 }
 
 .links,
 .chat,
-.typing-3eiiL_,
+.typing-2GQL18,
 .content,
 .guild-channels,
 .private-channels,
@@ -90,7 +90,7 @@ textarea {
         margin: 10px 0 17px;
 }
 
-.inner-3if5cm {
+.inner-zqa7da {
         background-color:rgba(255,255,255,1) !important;
         border: 1px solid rgba(0, 0, 0,1) !important;
         padding: 0 10px;
@@ -303,13 +303,13 @@ textarea {
         border-bottom-color:var(--main-color);
 }
 
-.chat .title-qAcLxz {
+.chat .title-3qD0b- {
         border-bottom: 1px solid rgba(0,0,0,0.3) !important;
         background: rgba(0,0,0,0.95) !important;
         box-shadow: none !important;
 }
 
-.header-1tSljs {
+.header-2o-2hj {
         border-bottom: 0px solid rgba(0,0,0,0.3) !important;
         background: rgba(0,0,0,0.15) !important;
         box-shadow: none !important;
@@ -320,7 +320,7 @@ textarea {
         background-color:rgba(255,255,255,0.1);
 }
 
-.botTagRegular-288-ZL,
+.botTagRegular-2HEhHi,
 .need-help-modal .header {
         background:var(--main-color);
         padding: 2px 3px;
@@ -602,7 +602,7 @@ textarea {
         top: 7px;
 }
 
-.textArea-20yzAH {
+.textArea-2Spzkt {
         font-size: 0.85em;
         color: var(--dark-color)!important;
 }
@@ -639,7 +639,7 @@ textarea {
         background:var(--main-color) !important;
 }
 
-.text-1rI06- {
+.text-1y-e8- {
         font-size:11px;
         color: rgba(128,0,0,1) !important;
 }
@@ -690,7 +690,7 @@ textarea {
 ポップアウト関係（20180207追加）
 */
 /*コメ欄のリアクション追加ボタン押したときに出るやつ*/
-.popouts .emojiPicker-3g68GS{
+.popouts .emojiPicker-3m1S-j{
         background-color: rgba(255,255,238,1) !important;
 }
 
@@ -732,15 +732,15 @@ textarea {
 */
 
 /* 左右背景の画像 （ふたばのトップページから引っ張ってる） */
-.scroller-NXV0-d {
+.scroller-2v3d_F {
         background-image: url("http://www.2chan.net/ba.gif") !important;
 }
 
-.membersWrap-3wRngy .scrollerWrap-2uBjct {/*透明度変更できるようにクラス指定変えました byHDk*/
+.membersWrap-2h-GB4 .scrollerWrap-2lJEkd {/*透明度変更できるようにクラス指定変えました byHDk*/
         background-image: url("http://www.2chan.net/ba.gif") !important;
 }
 
-.membersWrap-3wRngy .scroller-fzNley {/*右側メンバーリストの透過。グラデーションはいまいちだったのでコメントアウト byHDk*/
+.membersWrap-2h-GB4 .scroller-2FKFPG {/*右側メンバーリストの透過。グラデーションはいまいちだったのでコメントアウト byHDk*/
         background-color: rgba(64,64,64,0.1);
 /*
         background:-webkit-gradient(linear, left top, right top, from(rgba(64,64,64,0.5)), color-stop(0.075, rgba(64,64,64,0.1)), to(rgba(64,64,64,0.05))) !important;
@@ -748,97 +748,97 @@ textarea {
 }
 
 /* 右部分役職の文字色 (コメント色と同じ色に変更と強調)*/
-.membersGroup-3_dP5E {
+.membersGroup-v9BXpm {
         color:var(--accent-color) !important;
         font-weight: bold !important;
 }
-.memberInner-3XUq9K {
+.memberInner-2CPc3V {
         text-shadow: 1px 1px 0.25px rgba(64,64,64,1) !important;
         font-weight: bold;
 }
-.theme-dark .members-1bid1J .member-2FrNV0 {
+.theme-dark .members-1998pB .member-3W1lQa {
         color:hsla(0,0%,100%,1) !important;
 }
 
-.activityText-258pdj {
+.activityText-sLG0UL {
         color:var(--accent-color) !important;
 }
 /* 左部分チャンネルの文字色他 */
-.nameDefault-Lnjrwm {
+.nameDefault-2DI02H {
         color:var(--accent-color) !important;
         font-weight: bold !important;
 }
-.nameDefaultText-QoumjC {
+.nameDefaultText-24KCy5 {
 
         color:var(--dark-color)!important;
 }
-.nameUnreadText-1pxldj {
+.nameUnreadText-DfkrI4 {
         color:rgba(0,0,255,1)!important;
 }
-.nameDefaultVoice-1swZoh {
+.nameDefaultVoice-3WUH7s {
         color:var(--dark-color)!important;
 }
-.foreground-2zy1hc {
+.foreground-2W-aJk {
         color:var(--dark-color)!important;
 }
-.wrapper-2ldvyE {
+.wrapper-2NJDcI {
         color:var(--dark-color)!important;
         background: transparent !important;
 }
-.unread-23Kvxk {
+.unread-1Dp-OI {
         background-color:rgba(0,0,255,1)!important;
 }
 
-.contentHoveredText-2HYGIY, .contentHoveredVoice-3qGNKh:active, .contentSelectedVoice-gTtYM9:active {
+.contentHoveredText-2D9B-x, .contentHoveredVoice-3p_NEO:active, .contentSelectedVoice-1WDIBM:active {
   background-color: var(--main-color-faded) !important;
 }
 
-.contentUnreadText-2HYGIY, .contentHoveredVoice-3qGNKh:active, .contentSelectedVoice-gTtYM9:active {
+.contentUnreadText-2HYGIY, .contentHoveredVoice-3p_NEO:active, .contentSelectedVoice-1WDIBM:active {
   background-color: var(--main-color-faded) !important;
 }
 
-.nameHoveredText-2FFqiz {
+.nameHoveredText-1uO31y {
   color: var(--accent-color) !important;
 }
 
-.contentSelectedText-3j5CXt {
+.contentSelectedText-3wUhMi {
   border: solid 1px rgba(192,96,80,1) !important;
   background-color: rgba(192,96,80,0.5) !important;
 }
 
-.nameHoveredVoice-TIoHRJ {
+.nameHoveredVoice-YJ1Vfd {
   color: var(--accent-color) !important;
 }
 
-.nameHovered-28u_Fz, .nameSpeaking-3ROx9q {
+.nameHovered-21k1eo, .nameSpeaking-3UhoEZ {
   font-weight: bold !important;
   color: var(--accent-color) !important;
 }
 
 /* VC部屋に入ったユーザ*/
-.nameDefault-1I0lx8 {
+.nameDefault-2s3kbY {
         color:var(--dark-color)!important;
         font-weight: bold !important;
 }
 /* チャンネル作成ボタンの色*/
-.icon-2WU8ha {
+.icon-1KK5se {
        background-color:rgba(0,0,0,0.8) !important;
 }
 
 /* VCチャンネルのミュートアイコンの色 */
-.icon-1NXYub {
+.icon-3nr6O- {
         border-radius: 3px;
         background-color: rgba(128,0,0,.8) !important;
 }
-.icon-33Frxe {
+.icon-29PTzq {
         border-radius: 3px;
         background-color: rgba(128,0,0,.8) !important;
 }
 /* チャット入力部分のボタンの色 */
-.attachButtonPlus-2l1NEU {
+.attachButtonPlus-rUdX-B {
         fill: var(--accent-color) !important;
 }
-.spriteNormal-3BYqCK {
+.spriteNormal-1wvG5n {
         filter: grayscale(100%) brightness(60%) !important;
 }
 
@@ -851,7 +851,7 @@ textarea {
 }
 
 /* アップロードしたファイルの容量の文字色 */
-.metadata-2t2-gW {
+.metadata-3WGS0M {
         color:var(--dark-color)!important;
 }
 
@@ -882,11 +882,11 @@ textarea {
 }
 
 /* ユーザー設定画面の文字色など */
-.header-1-f9X5 {
+.header-2RyJ0Y {
         color:var(--dark-color)!important;
         font-weight: bold !important;
 }
-.notSelected-PgwTMa {
+.notSelected-1N1G5p {
         color:var(--accent-color) !important;
 }
 .ui-tab-bar-header {
@@ -896,26 +896,26 @@ textarea {
 .ui-tab-bar-item {
         color:var(--accent-color) !important;
 }
-.description-3MVziF {
+.description-3_Ncsb {
         color:var(--dark-color)!important;
 }
-.default-3bB32Y {
+.default-3nhoK- {
         color:var(--dark-color)!important;
 }
 .contentsDefault-nt2Ym5 {
         color:var(--dark-color)!important;
 }
-.h2-2ar_1B {
+.h2-2gWE-o {
         color:var(--dark-color)!important;
         font-weight: bold !important;
 }
-.h3-gDcP8B {
+.h3-3PDeKG {
         color:var(--dark-color)!important;
 }
-.h5-3KssQU {
+.h5-18_1nd {
         color:var(--dark-color)!important;
 }
-.titleDefault-1CWM9y {
+.titleDefault-a8-ZSr {
         color:var(--dark-color)!important;
 }
 .now-playing-add {
@@ -926,64 +926,64 @@ textarea {
 }
 
 /* チャンネルの設定画面の文字色 */
-.markValue-235z9M {
+.markValue-2DwdXI {
         color:var(--dark-color)!important;
 }
-.title-38OOBL {
+.title-2BxgL2 {
         color:var(--dark-color)!important;
 }
-.text-1rLRsh {
+.text-GwUZgS {
         color:var(--dark-color)!important;
 }
 
 /* コンテキストメニュー */
-.contextMenu-uoJTbz {
+.contextMenu-HLZMGh {
   border: 1px solid var(--main-color) !important;
   background: var(--main-color-faded-no-alpha) !important;
 }
 
-.contextMenu-uoJTbz .item-1XYaYf {
+.contextMenu-HLZMGh .item-1Yvehc {
   color: var(--accent-color) !important;
   background: rgba(240,224,214,1) !important;
 }
 
-.contextMenu-uoJTbz .itemGroup-oViAgA {
+.contextMenu-HLZMGh .itemGroup-1tL0uz {
   color: var(--accent-color) !important;
   background: rgba(240,224,214,1) !important;
 }
 
-.contextMenu-uoJTbz .itemSubMenu-3ZgIw- {
+.contextMenu-HLZMGh .itemSubMenu-1vN_Yn {
   color: var(--accent-color) !important;
   background: rgba(240,224,214,1) url(/assets/e4afe52f6863408a35654a6e5fd69ba9.svg) no-repeat 155px 50% !important;
 }
 
-.contextMenu-uoJTbz .plugin-context-menu {
+.contextMenu-HLZMGh .plugin-context-menu {
   background: rgba(240,224,214,1) !important;
 }
 
-.contextMenu-uoJTbz .scroller-fzNley {
+.contextMenu-HLZMGh .scroller-2FKFPG {
   border: 1px solid var(--main-color) !important;
   background: var(--main-color-faded-no-alpha) !important;
 }
 
-.iconSpacing-5GIHkT .icon-3dhTrw {
+.iconSpacing-3JkGQO .icon-1792kv {
   border-radius: 3px;
   background-color: rgba(128,0,0,.5) !important;
 }
 
-.iconSpacing-5GIHkT .icon-3dhTrw:hover {
+.iconSpacing-3JkGQO .icon-1792kv:hover {
   background-color: rgba(128,0,0,.8) !important;
 }
 
-.iconSpacing-5GIHkT .actionIcon-2JXNvo {
+.iconSpacing-3JkGQO .actionIcon-2Hi9ZG {
   border-radius: 3px;
   background-color: rgba(128,0,0,.5) !important;
 }
 
-.iconSpacing-5GIHkT .actionIcon-2JXNvo:hover {
+.iconSpacing-3JkGQO .actionIcon-2Hi9ZG:hover {
   background-color: rgba(128,0,0,.8) !important;
 }
 
-.unread-2TDDFN {
+.unread-1xRYoj {
   background-color: var(--accent-color) !important;
 }
