@@ -12,6 +12,8 @@
         2018/02/09 00:45 メンバーリスト部分をちょっと暗めにしてみた（背景画像指定クラスの調整）
         2018/02/11 02:30 チャンネルリストのテキスト色/背景色/アイコンなどを調整（基本カラーで統一）
         2018/04/16 00:30 Discord本体のバージョンアップに対応
+        2018/04/29 12:15 Discord本体のバージョンアップに対応 おまじないを付与
+        2018/05/05 12:00 https://gist.github.com/intrnl/b758b9d9ed5c05e6377b27d647b11d91 を取り込み
         */
 
 :root {
@@ -631,6 +633,10 @@ textarea {
         background:rgba(255,255,255,0.1) !important;
 }
 
+.channel-textarea-Noautocomplete-inner {
+        background:rgba(255,255,255,0.1) !important;
+}
+
 .channel-textarea-guard button {
         background:var(--accent-color) !important;
 }
@@ -814,6 +820,9 @@ textarea {
   font-weight: bold !important;
   color: var(--accent-color) !important;
 }
+.nameDefaultVoice-3WUH7s {
+  color:var(--dark-color)!important;
+}
 
 /* VC部屋に入ったユーザ*/
 .nameDefault-2s3kbY {
@@ -986,4 +995,9 @@ textarea {
 
 .unread-1xRYoj {
   background-color: var(--accent-color) !important;
+}
+
+/* 魔除けのおまじない */
+.message-group-blocked {
+  display: none !important;
 }
