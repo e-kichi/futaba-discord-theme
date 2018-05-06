@@ -14,6 +14,7 @@
         2018/04/16 00:30 Discord本体のバージョンアップに対応
         2018/04/29 12:15 Discord本体のバージョンアップに対応 おまじないを付与
         2018/05/05 12:00 https://gist.github.com/intrnl/b758b9d9ed5c05e6377b27d647b11d91 を取り込み
+        2018/05/06 13:00 テキスト入力とオートコンプリートの色調整
         */
 
 :root {
@@ -88,12 +89,12 @@ textarea {
 
 */
 
-.channel-text-area-default {
+.channelTextAreaEnabled-iusU9o {
         margin: 10px 0 17px;
 }
 
 .inner-zqa7da {
-        background-color:rgba(255,255,255,1) !important;
+        background-color:rgba(255,255,255,0.1) !important;
         border: 1px solid rgba(0, 0, 0,1) !important;
         padding: 0 10px;
 }
@@ -609,32 +610,39 @@ textarea {
         color: var(--dark-color)!important;
 }
 
-.channel-textarea-upload {
+.uploadInput-2lNPSo {
         border-right-color: hsla(0,0%,100%,.1) !important;
 }
 
-.channel-textarea-inner {
-        border: 2px solid rgba(128,0,0,0.2) !important;
+.innerEnabled-3g80kR {
+        border: 1px solid var(--accent-color) !important;
         background:rgba(0,0,0,0.6) !important;
 }
 
-.channel-textarea-autocomplete-inner {
-        border:none !important;
-        background:rgba(0,0,0,0.95) !important;
+.innerAutocomplete-1PN280 {
+        background:rgba(255,255,255,0.1) !important;
 }
 
-.channel-textarea-autocomplete-inner header {
-        border:none !important;
-        background: rgba(37,172,232,0.5) !important;
+.innerAutocomplete-1PN280 header {
+        background:rgba(255,255,255,0.1) !important;
         color: rgba(255,255,255,0.9) !important;
 }
 
-.channel-textarea-autocomplete-inner ul li.active {
+.innerAutocomplete-1PN280 ul li.active {
         background:rgba(255,255,255,0.1) !important;
 }
 
-.channel-textarea-Noautocomplete-inner {
+.innerNoAutocomplete-1WpcVO {
         background:rgba(255,255,255,0.1) !important;
+}
+
+.autocomplete-1vrmpx {
+        border: 1px solid var(--accent-color) !important;
+        background: rgba(216,176,195,1) !important;
+}
+
+.selectorSelected-1_M1WV {
+        background: var(--accent-color) !important;
 }
 
 .channel-textarea-guard button {
@@ -849,6 +857,11 @@ textarea {
 }
 .spriteNormal-1wvG5n {
         filter: grayscale(100%) brightness(60%) !important;
+}
+
+/* 添付ボタンとチャット入力部分の間仕切りの色 */
+.attachButtonDivider-3Glu60 {
+  background-color: var(--accent-color) !important;
 }
 
 /* 絵文字レス用のボタンの色 */
